@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/blog9.jpg" alt="Blog Logo">
+            <h1>VoiceInfo</h1>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav">
+            <!-- Categories -->
+            <div class="categories">
+                <a href="#">Technology</a>
+                <a href="#">Health</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">Education</a>
+                <a href="#">Business</a>
+            </div>
+
+            <!-- Theme and Auth Buttons -->
+            <div class="theme-and-auth">
+                <button class="desktop-mode-toggle">🌙</button>
+                <div class="dropdown">
+                    <a href="/loginSignUp/login.html">Login <span>&#9662;</span></a>
+                    <div class="dropdown-content">
+                        <a href="/loginSignUp/signUp.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Header Buttons -->
+        <div class="mobile-header-buttons">
+            <button class="mobile-mode-toggle">🌙</button>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <nav>
+            <a href="#">Technology</a>
+            <a href="#">Health</a>
+            <a href="#">Lifestyle</a>
+            <a href="#">Education</a>
+            <a href="#">Business</a>
+            <a href="/loginSignUp/login.html">Login <span>&#9662;</span></a>
+            
+          
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for articles..." class="search-input">
+            <button class="search-button">Search</button>
+        </div>
+
+        <!-- Featured Posts -->
+        <div class="featured-posts">
+            <!-- Featured Post 1 -->
+            <div class="featured-post">
+                <img src="images/1.jpg" alt="Featured Post 1" class="post-image">
+                <div class="post-content">
+                    <span class="post-date">October 10, 2023 | 10:00 AM</span>
+                    <h2 class="post-title">The Future of Artificial Intelligence</h2>
+                    <p class="post-excerpt">Discover how AI is transforming industries and what the future holds for this groundbreaking technology.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+
+            <!-- Featured Post 2 -->
+            <div class="featured-post">
+                <img src="images/2.jpg" alt="Featured Post 2" class="post-image">
+                <div class="post-content">
+                    <span class="post-date">October 9, 2023 | 3:30 PM</span>
+                    <h2 class="post-title">Sustainable Living: A Beginner's Guide</h2>
+                    <p class="post-excerpt">Learn practical tips and tricks to live a more sustainable lifestyle and reduce your carbon footprint.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- All Stories and Popular Posts Section -->
+    <section class="stories-section">
+        <div class="stories-container">
+            <!-- All Stories -->
+            <div class="all-stories">
+                <h2>All Stories</h2>
+                <!-- Story Items -->
+                <div class="story" data-page="1">
+                    <img src="images/3.jpg" alt="Story 1" class="story-image">
+                    <div class="story-content">
+                        <span class="story-category">Technology</span>
+                        <h3 class="story-title">The Future of AI in Everyday Life</h3>
+                        <p class="story-description">Discover how AI is transforming industries and what the future holds for this groundbreaking technology.</p>
+                        <div class="story-meta">
+                            <img src="images/avatar2.jpg" alt="User  1" class="user-avatar">
+                            <span class="user-name">John Doe</span>
+                            <span class="post-date-story">October 10, 2023 | 10:00 AM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story" data-page="1">
+                    <img src="images/5.jpg" alt="Story 2" class="story-image">
+                    <div class="story-content">
+                        <span class="story-category">Lifestyle</span>
+                        <h3 class="story-title">10 Tips for a Minimalist Lifestyle</h3>
+                        <p class="story-description">Learn practical tips and tricks to live a more sustainable and minimalist lifestyle.</p>
+                        <div class="story-meta">
+                            <img src="images/sal.jpg" alt="User  2" class="user-avatar">
+                            <span class="user-name">Jane Smith</span>
+                            <span class="post-date-story">October 9, 2023 | 3:30 PM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more stories as needed -->
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-link" data-page="1">1</a>
+                    <a href="#" class="page-link" data-page="2">2</a>
+                    <a href="#" class="page-link" data-page="3">3</a>
+                    <a href="#" class="page-link" data-page="4">4</a>
+                    <a href="#" class="page-link" data-page="5">5</a>
+                    <a href="#" class="page-link next">Next →</a>
+                </div>
+            </div>
+
+            <!-- Popular Posts -->
+            <div class="popular-posts">
+                <h2>Popular Posts</h2>
+                <!-- Popular Post 1 -->
+                <div class="popular-post">
+                    <span class="popular-rank">1</span>
+                    <img src="images/blog4.jpg" alt="Popular Post 1" class="popular-image">
+                    <div class="popular-content">
+                        <h3 class="popular-title">Top 10 Programming Languages in 2023</h3>
+                        <span class="popular-date">October 8, 2023</span>
+                    </div>
+                </div>
+
+                <!-- Popular Post 2 -->
+                <div class="popular-post">
+                    <span class="popular-rank">2</span>
+                    <img src="images/blog5.jpg" alt="Popular Post 2" class="popular-image">
+                    <div class="popular-content">
+                        <h3 class="popular-title">The Rise of Remote Work</h3>
+                        <span class="popular-date">October 7, 2023</span>
+                    </div>
+                </div>
+
+                <!-- Add more popular posts as needed -->
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+  
+   <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="categories-container">
+            <!-- Technology Category -->
+            <div class="category">
+                <div class="category-header">
+                    <h2 class="category-title">Technology</h2>
+                    <a href="technology.html" class="see-more">See More</a>
+                </div>
+                <div class="category-posts">
+                    <!-- Post 1 -->
+                    <div class="category-post">
+                        <img src="images/3.jpg" alt="Post 1" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">The Future of AI in Everyday Life</h3>
+                            <p class="category-post-description">Discover how AI is transforming industries and what the future holds for this groundbreaking technology.</p>
+                            <span class="category-post-date">October 10, 2023</span>
+                        </div>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="category-post">
+                        <img src="images/4.jpg" alt="Post 2" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">Top 10 Programming Languages in 2023</h3>
+                            <p class="category-post-description">A look at the most popular programming languages this year.</p>
+                            <span class="category-post-date">October 8, 2023</span>
+                        </div>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="category-post">
+                        <img src="images/5.jpg" alt="Post 3" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">The Rise of Remote Work</h3>
+                            <p class="category-post-description">How remote work is changing the tech industry.</p>
+                            <span class="category-post-date">October 7, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Health Category -->
+            <div class="category">
+                <div class="category-header">
+                    <h2 class="category-title">Health</h2>
+                    <a href="health.html" class="see-more">See More</a>
+                </div>
+                <div class="category-posts">
+                    <!-- Post 1 -->
+                    <div class="category-post">
+                        <img src="images/6.jpg" alt="Post 1" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">10 Tips for a Healthy Lifestyle</h3>
+                            <p class="category-post-description">Simple habits to improve your health.</p>
+                            <span class="category-post-date">October 9, 2023</span>
+                        </div>
+                    </div>
+                    <!-- Post 2 -->
+                    <div class="category-post">
+                        <img src="images/7.jpg" alt="Post 2" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">The Benefits of Meditation</h3>
+                            <p class="category-post-description">How meditation can improve mental health.</p>
+                            <span class="category-post-date">October 6, 2023</span>
+                        </div>
+                    </div>
+                    <!-- Post 3 -->
+                    <div class="category-post">
+                        <img src="images/8.jpg" alt="Post 3" class="category-post-image">
+                        <div class="category-post-content">
+                            <h3 class="category-post-title">The Science of Sleep</h3>
+                            <p class="category-post-description">Why sleep is essential for health.</p>
+                            <span class="category-post-date">October 5, 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Your Name and Site Description -->
+            <!-- Subscribe Section (Optional) -->
+            <div class="subscribe">
+                <h3 class="subscribe-title">Subscribe to our newsletter</h3>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email" class="subscribe-input" required>
+                    <button type="submit" class="subscribe-button">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="#" class="social-icon"><img src="images/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="images/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="images/instagram-icon.png" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="images/linkedin-icon.png" alt="LinkedIn"></a>
+            </div>
+
+            <!-- Copyright Notice -->
+            <p class="copyright">&copy; 2023 VoiceInfo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="javascriptFile/navbar.js"></script>
+    <script src="javascriptFile/lightMode.js"></script>
+    <script src="javascriptFile/pagination.js"></script>
+    <script src="javascriptFile/seeMore.js"></script>
+
+
+</body>
+</html>

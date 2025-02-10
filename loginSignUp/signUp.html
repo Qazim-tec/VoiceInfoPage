@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - VoiceInfo</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/loginSignUp/login.css">
+</head>
+<body class="light-mode">
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="/images/blog9.jpg" alt="Blog Logo">
+            <h1>VoiceInfo</h1>
+        </div>
+        <nav class="desktop-nav">
+            <div class="categories">
+                <a href="/index.html">Home</a>
+                <a href="#">Technology</a>
+                <a href="#">Health</a>
+                <a href="#">Lifestyle</a>
+                <a href="#">Education</a>
+                <a href="#">Business</a>
+            </div>
+            <div class="theme-and-auth">
+                <button class="desktop-mode-toggle">🌙</button>
+                <div class="dropdown">
+                    <a href="login.html">Login <span>&#9662;</span></a>
+                </div>
+            </div>
+        </nav>
+        <div class="mobile-header-buttons">
+            <button class="mobile-mode-toggle">🌙</button>
+            <button class="menu-toggle">☰</button>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="#">Technology</a>
+            <a href="#">Health</a>
+            <a href="#">Lifestyle</a>
+            <a href="#">Education</a>
+            <a href="#">Business</a>
+            <a href="login.html">Login <span>&#9662;</span></a>
+        </nav>
+    </div>
+
+    <!-- Sign Up Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <h2>Create Your Account</h2>
+            <form class="signup-form">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <ul id="password-requirements">
+                        <li id="length-requirement" class="invalid">Min. 8 chars</li>
+                        <li id="uppercase-requirement" class="invalid">uppercase</li>
+                        <li id="number-requirement" class="invalid">number</li>
+                        <li id="special-requirement" class="invalid">special char</li>
+                    </ul>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    <!-- Error message below confirm password field -->
+                    <span id="password-error" style="display: none; color: red;"></span>
+                </div>
+
+                <button type="submit" class="signup-button">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+            </form>
+        </div>
+
+        <!-- Signup Loading Overlay -->
+        <div id="signupLoadingOverlay" class="loading-overlay">
+            <div class="spinner"></div>
+        </div>
+
+        <!-- Signup Success Overlay -->
+        <div id="signupSuccessOverlay" class="success-overlay">
+            <div class="success-checkmark">&#10004;</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="copyright">&copy; 2023 VoiceInfo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/javascriptFile/navbar.js"></script>
+    <script src="/javascriptFile/lightMode.js"></script>
+    <script src="/javascriptFile/signUp.js"></script>
+</body>
+</html>
