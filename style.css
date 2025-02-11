@@ -792,6 +792,18 @@ body.dark-mode .social-icon img {
     display: block;
   }
 
+
+  .search-input {
+    max-width: 280px; /* Adjusts the input width for tablet screens */
+    font-size: 14px;  /* Reduces font size for better mobile fit */
+    padding: 10px 14px; /* Adjusts padding for mobile */
+}
+
+.search-button {
+    font-size: 14px; /* Reduces button font size */
+    padding: 10px 14px; /* Adjusts padding for better mobile fit */
+}
+
   .stories-container {
     flex-direction: column;
   }
