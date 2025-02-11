@@ -9,55 +9,37 @@
 </head>
 <body class="light-mode">
     <!-- Header -->
-    <header>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="/images/blog9.jpg" alt="Blog Logo">
-            <h1>VoiceInfo</h1>
-        </div>
-
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <!-- Categories -->
-            <div class="categories">
-                <a href="/index.html">Home</a>
-                <a href="#">Technology</a>
-                <a href="#">Health</a>
-                <a href="#">Lifestyle</a>
-                <a href="#">Education</a>
-                <a href="#">Business</a>
-            </div>
-
-            <!-- Theme and Auth Buttons -->
-            <div class="theme-and-auth">
-                <button class="desktop-mode-toggle">🌙</button>
-                <div class="dropdown">
-                    <a href="login.html">Login <span>&#9662;</span></a>
-                   
-                </div>
-            </div>
-        </nav>
-
-        <!-- Mobile Header Buttons -->
-        <div class="mobile-header-buttons">
-            <button class="mobile-mode-toggle">🌙</button>
-            <button class="menu-toggle">☰</button>
-        </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <nav>
-            <a href="/index.html">Home</a>
-            <a href="#">Technology</a>
-            <a href="#">Health</a>
-            <a href="#">Lifestyle</a>
-            <a href="#">Education</a>
-            <a href="#">Business</a>   
-            <a href="login.html">Login <span>&#9662;</span></a>
-           
-        </nav>
-    </div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+    
+                // Load scripts AFTER the header is inserted
+                loadNavbarScripts();
+                loadLightModeScripts();
+            });
+    
+        function loadNavbarScripts() {
+            const script = document.createElement('script');
+            script.src = '/javascriptFile/navbar.js';
+            document.body.appendChild(script);
+        }
+    
+        function loadLightModeScripts() {
+            const script = document.createElement('script');
+            script.src = '/javascriptFile/lightMode.js';
+            script.onload = applyStoredTheme; // Ensure the theme is applied once script loads
+            document.body.appendChild(script);
+        }
+    
+        // Apply theme after header is loaded
+        function applyStoredTheme() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
 
     <!-- Login Section -->
     <section class="login-section">
@@ -112,9 +94,13 @@
         </div>
     </footer>
 
+    
     <script src="/javascriptFile/navbar.js"></script>
     <script src="/javascriptFile/lightMode.js"></script>
     <script src="/javascriptFile/SignIn.js"></script>
+    
+    
+    
  
 </body>
 </html>

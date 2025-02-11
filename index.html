@@ -7,93 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="light-mode">
-    <header>
-        <!-- Logo -->
-        <div class="logo">
-            <img src="images/blog9.jpg" alt="Blog Logo">
-            <h1>VoiceInfo</h1>
-        </div>
+    <script>
+        fetch('/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('body').insertAdjacentHTML('afterbegin', data);
+    
+                // Load scripts AFTER the header is inserted
+                loadNavbarScripts();
+                loadLightModeScripts();
+            });
+    
+        function loadNavbarScripts() {
+            const script = document.createElement('script');
+            script.src = '/javascriptFile/navbar.js';
+            document.body.appendChild(script);
+        }
+    
+        function loadLightModeScripts() {
+            const script = document.createElement('script');
+            script.src = '/javascriptFile/lightMode.js';
+            script.onload = applyStoredTheme; // Ensure the theme is applied once script loads
+            document.body.appendChild(script);
+        }
+    
+        // Apply theme after header is loaded
+        function applyStoredTheme() {
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
+    
+    
+    
 
-        <!-- Desktop Navigation -->
-        <nav class="desktop-nav">
-            <!-- Categories -->
-            <div class="categories">
-                <a href="#">Technology</a>
-                <a href="#">Health</a>
-                <a href="#">Lifestyle</a>
-                <a href="#">Education</a>
-                <a href="#">Business</a>
+    <!-- Hero Section -->
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search for articles..." class="search-input">
+                <button class="search-button">Search</button>
             </div>
 
-            <!-- Theme and Auth Buttons -->
-            <div class="theme-and-auth">
-                <button class="desktop-mode-toggle">🌙</button>
-                <div class="dropdown">
-                    <a href="/loginSignUp/login.html">Login <span>&#9662;</span></a>
-                    <div class="dropdown-content">
-                        <a href="/loginSignUp/signUp.html">Sign Up</a>
+            <!-- Featured Posts -->
+            <div class="featured-posts">
+                <!-- Featured Post 1 -->
+                <div class="featured-post">
+                    <img src="images/1.jpg" alt="Featured Post 1" class="post-image">
+                    <div class="post-content">
+                        <span class="post-date">October 10, 2023 | 10:00 AM</span>
+                        <h2 class="post-title">The Future of Artificial Intelligence</h2>
+                        <p class="post-excerpt">Discover how AI is transforming industries and what the future holds for this groundbreaking technology.</p>
+                        <a href="#" class="read-more">Read More</a>
+                    </div>
+                </div>
+
+                <!-- Featured Post 2 -->
+                <div class="featured-post">
+                    <img src="images/2.jpg" alt="Featured Post 2" class="post-image">
+                    <div class="post-content">
+                        <span class="post-date">October 9, 2023 | 3:30 PM</span>
+                        <h2 class="post-title">Sustainable Living: A Beginner's Guide</h2>
+                        <p class="post-excerpt">Learn practical tips and tricks to live a more sustainable lifestyle and reduce your carbon footprint.</p>
+                        <a href="#" class="read-more">Read More</a>
                     </div>
                 </div>
             </div>
-        </nav>
-
-        <!-- Mobile Header Buttons -->
-        <div class="mobile-header-buttons">
-            <button class="mobile-mode-toggle">🌙</button>
-            <button class="menu-toggle">☰</button>
         </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <nav>
-            <a href="#">Technology</a>
-            <a href="#">Health</a>
-            <a href="#">Lifestyle</a>
-            <a href="#">Education</a>
-            <a href="#">Business</a>
-            <a href="/loginSignUp/login.html">Login <span>&#9662;</span></a>
-            
-          
-        </nav>
-    </div>
-
-    <!-- Hero Section -->
-    <!-- Hero Section -->
-<section class="hero-section">
-    <div class="hero-container">
-        <!-- Search Bar -->
-        <div class="search-bar">
-            <input type="text" placeholder="Search for articles..." class="search-input">
-            <button class="search-button">Search</button>
-        </div>
-
-        <!-- Featured Posts -->
-        <div class="featured-posts">
-            <!-- Featured Post 1 -->
-            <div class="featured-post">
-                <img src="images/1.jpg" alt="Featured Post 1" class="post-image">
-                <div class="post-content">
-                    <span class="post-date">October 10, 2023 | 10:00 AM</span>
-                    <h2 class="post-title">The Future of Artificial Intelligence</h2>
-                    <p class="post-excerpt">Discover how AI is transforming industries and what the future holds for this groundbreaking technology.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-
-            <!-- Featured Post 2 -->
-            <div class="featured-post">
-                <img src="images/2.jpg" alt="Featured Post 2" class="post-image">
-                <div class="post-content">
-                    <span class="post-date">October 9, 2023 | 3:30 PM</span>
-                    <h2 class="post-title">Sustainable Living: A Beginner's Guide</h2>
-                    <p class="post-excerpt">Learn practical tips and tricks to live a more sustainable lifestyle and reduce your carbon footprint.</p>
-                    <a href="#" class="read-more">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
     <!-- All Stories and Popular Posts Section -->
     <section class="stories-section">
@@ -283,10 +267,11 @@
         </div>
     </footer>
 
-    <script src="javascriptFile/navbar.js"></script>
+    <script src="/javascriptFile/navbar.js"></script>
     <script src="javascriptFile/lightMode.js"></script>
     <script src="javascriptFile/pagination.js"></script>
     <script src="javascriptFile/seeMore.js"></script>
+    <script src="/javascriptFile/SignIn.js"></script>
 
 
 </body>
